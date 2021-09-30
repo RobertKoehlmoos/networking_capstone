@@ -51,6 +51,8 @@ The controller begins with a default list of tasks that it gives to all
 workers, but regularly checks a specified file for any additional tasks
 for specific workers.
 
+Your controller will be implemented in the controller.py file.
+
 Requirements:
 - The controller will listen on port 443 by default, but will allow a different port to be specified.
 - The controller will maintain a dictionary mapping all known hosts to a list of tasks for each host.
@@ -65,6 +67,8 @@ Requirements:
 The worker is a client that connects to a controller. It accepts tasks from a controller
 and executes them, sending back any relevant information. The worker calls back to a controller
 to request tasks at set intervals.
+
+Your worker will be implemented in the worker.py file.
 
 Requirements:  
 - The worker will default to a callback interval of 30 seconds.
